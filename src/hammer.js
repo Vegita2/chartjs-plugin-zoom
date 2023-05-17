@@ -113,7 +113,7 @@ function startPan(chart, state, event) {
 function endPan(chart, state) {
   state.delta = null;
   if (state.panning) {
-    state.panEndTimeout = setTimeout(() => (state.panning = false), 500);
+    state.panEndTimeout = setTimeout(() => (state.panning = false), 20);
     call(state.options.pan.onPanComplete, [{chart}]);
   }
 }
